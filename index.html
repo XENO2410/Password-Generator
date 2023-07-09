@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-xwclxM80/mu+rxN8+OHs4JwPF9jcTtfi9jvD5K5h6+21L5f0uYyDw6odg+BIfQdO" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Password Generator APP</title>
+</head>
+
+<body class="h-24 bg-gradient-to-r from-red-500 w-[300px] mx-auto ">
+
+
+    <div class=" h-50 bg-gradient-to-r from-teal-400 to-blue-500 border-4 mt-[200px] wrapper flex flex-col mx-auto rounded-xl p-3 ">
+
+        <div class="wrapper flex flex-col ">
+
+            <div>
+                <h1 class="mb-[20px] font-bold ml-[47px] text-xl text-white">Password Generator</h1>
+               </div>
+        
+            <!-- Copy Icon Vala level -->
+        
+            <div class=" display-container flex flex-row justify-between mb-[10px] border-4 rounded -xl p-2">
+                <input readonly placeholder="Password" class="display bg-transparent placeholder-gray-800 " data-passwordDisplay>
+               <!-- <input placeholder="Password" type="text" class="ml-[8px]"> -->
+             <button data-copy>
+                <span data-copyMsg></span>
+                <img src="copy.svg" alt="copy" width="23" height="23" class="mr-[10px]">
+             </button>
+        
+            </div>
+        
+            <!-- Main Box -->
+    
+           <div class="length-container flex flex-row justify-between mb-[8px] font-bold ml-2">
+            <p class="text-black text-white">PASSWORD LENGTH</p>
+            <p data-lengthNumber class=" text-yellow text-white">0</p>
+           </div>
+    
+         <!--slider-->
+         <input type="range" min="1" max="20" class="slider p-4" step="1" data-lengthSlider>
+    
+           <!-- Check Boxes -->
+           <div class="p-2">
+    
+            <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase" class="text-white">INCLUDE CAPITAL LETTERS</label>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase"  class="text-white">INCLUDES SMALL LETTERS</label>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="numbers">
+                <label for="numbers"  class="text-white">INCLUDES NUMBERS</label>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="symbols">
+                <label for="symbols"  class="text-white">INCLUDES SYMBOLS</label>
+            </div>
+    
+           </div>
+           
+           <!-- Strength and color btn -->
+                <div class="strength-cointainer flex  flex-row justify-between mb-[8px] font-bold">
+                    <div><p  class="text-white">STRENGTH</p></div>
+                    
+                    <div data-indicator class="w-[20px] h-[20px] border-none border-black
+                    rounded-full"></div>
+                </div>
+                
+                <!-- generate password-->
+                <button class="generateButton w-[280px] border-4 border-pink rounded-xl font-bold -ml-[5px] text-white p-2">GENERATE PASSWORD</button>
+
+        <div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
